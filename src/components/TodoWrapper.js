@@ -42,7 +42,7 @@ const TodoWrapper = () => {
 
     return (
         <div>
-            <h1>Todo Wrapper Component</h1>
+            <h1 className='top'>Todo Wrapper Component</h1>
             <TodoMenu changeType = {changeType}></TodoMenu>
             <TodoInput addTodo = {addTodo}></TodoInput>
             <TodoList todos={todos} oper = {oper}></TodoList>

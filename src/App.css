@@ -38,11 +38,21 @@
 
 .menu {
   margin-left: 0.5em;
+  height: 50px;
 }
 
 .menu span {
   margin: 0.5em;
-  background-color: pink;
+  background-color: aqua;
+}
+
+.box {
+  background-color: #61dafb;
+}
+
+.top {
+  background-color: aquamarine;
+  color: palevioletred;
 }
 
 @keyframes App-logo-spin {

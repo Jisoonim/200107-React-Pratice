@@ -21,7 +21,7 @@ const Todo = ({todo, oper}) => {
     }
 
     return (
-        <div>
+        <div className='box'>
             <input type = 'checkbox' onChange = {handleChange}></input>
             <span style={todo.done ? styleDone : styleYet}>{todo.title}</span>
             <button onClick = {handleClick}>DELETE</button>
