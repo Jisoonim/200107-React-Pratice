@@ -36,6 +36,15 @@
   border: 1px solid blue;
 }
 
+.menu {
+  margin-left: 0.5em;
+}
+
+.menu span {
+  margin: 0.5em;
+  background-color: pink;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

@@ -4,7 +4,20 @@ import Todo from './Todo'
 
 const TodoList = ({todos, oper}) => {
 
-    const list = todos.map(t => <li key={t.tno}> <Todo todo={t} oper = {oper}></Todo> </li>)
+    const filter = () => {
+        if(!oper.type) {
+            return todos
+        }
+        if(oper.type === 'D') { //DONE 출력
+            return todos.filter(t => t.done === true)
+        }
+        if(oper.type === 'Y') { //YET 출력
+            return todos.filter(t => t.done === false)
+        }
+        return todos //else ALL
+    }
+
+    const list = filter().map(t => <li key={t.tno}> <Todo todo={t} oper = {oper}></Todo> </li>)
 
 
 
