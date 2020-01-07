@@ -1,16 +1,30 @@
 import React from 'react'
 
-const Todo = ({todo}) => {
+const Todo = ({todo, oper}) => {
 
-    const style = {
-        backgroundColor : "red"
+    const styleDone = {
+        textDecoration : 'line-through'
+    }
+
+    const styleYet = {
+        textDecoration : 'underline'
+    }
+
+    const handleChange = () => {
+        console.log("handleChange")
+        oper.updateDone(todo.tno)
+    }
+
+    const handleClick = () => {
+        console.log("delete click")
+        oper.deleteTodo(todo.tno)
     }
 
     return (
         <div>
-            <input type = 'checkbox'></input>
-            <span style={style}>{todo.title}</span>
-            <button>DELETE</button>
+            <input type = 'checkbox' onChange = {handleChange}></input>
+            <span style={todo.done ? styleDone : styleYet}>{todo.title}</span>
+            <button onClick = {handleClick}>DELETE</button>
         </div>
     )
 }

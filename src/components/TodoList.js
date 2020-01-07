@@ -2,9 +2,9 @@
 import React from 'react'
 import Todo from './Todo'
 
-const TodoList = ({todos}) => {
+const TodoList = ({todos, oper}) => {
 
-    const list = todos.map(t => <li key={t.tno}><Todo todo={t}></Todo></li>)
+    const list = todos.map(t => <li key={t.tno}> <Todo todo={t} oper = {oper}></Todo> </li>)
 
 
 

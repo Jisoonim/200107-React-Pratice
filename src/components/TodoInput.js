@@ -1,6 +1,6 @@
 import React, {useState, useRef} from 'react'
 
-const TodoInput = () => {
+const TodoInput = ({addTodo}) => {
 
     const inputRef = useRef()
 
@@ -13,6 +13,7 @@ const TodoInput = () => {
 
     const handleClick = (e) => {
         console.log("click")
+        addTodo(text)
         setText('')
         inputRef.current.focus()
     }
